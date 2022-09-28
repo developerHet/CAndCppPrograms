@@ -1,0 +1,1 @@
+{"name":"Local: HOWMANYMAX","url":"d:\\Programing Language\\C & C++ Programing\\Cod Cheff\\HOWMANYMAX.cpp","tests":[{"id":1654705505702,"input":"3\n2\n0\n7\n000111\n6\n11100","output":"1\n1\n2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Programing Language\\C & C++ Programing\\Cod Cheff\\HOWMANYMAX.cpp","group":"local","local":true}

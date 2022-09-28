@@ -1,0 +1,1 @@
+{"name":"Local: INSURANCE","url":"d:\\Programing Language\\C & C++ Programing\\Cod Cheff\\INSURANCE.cpp","tests":[{"id":1658482318611,"input":"4\n5 3\n5 8\n4 4\n15 12","output":"3\n5\n4\n12"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Programing Language\\C & C++ Programing\\Cod Cheff\\INSURANCE.cpp","group":"local","local":true}
