@@ -1,31 +1,26 @@
 #include <bits/stdc++.h>
 using namespace std;
-typedef long long ll;
-typedef vector<int> vi;
-typedef pair<int,int> pi;
-ll MOD=1000000007;
- 
- 
- 
-void solve() {
-    int n;
-    cin >> n;
-    vi a(n);
-    for(int i=0;i<n;i++) {
-        cin >> a[i];
-    }
-    sort(a.begin(),a.end());
-}
- 
- 
- 
-int main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+int main()
+{
     int t;
+    t = 1;
     cin >> t;
-    while(t--) {
-       solve();
+    while (t--)
+    {
+        int n;
+        cin >> n;
+        int v[n];
+        for (int i = 0; i < n; i++)
+            cin >> v[i];
+        sort(v, v + n);
+        if (n % 2 || v[n / 2] == v[n / 2 - 1] && count(v, v + n, v[n / 2]) >= n / 2)
+            cout << "NO" << endl;
+        else
+        {
+            cout << "YES" << endl;
+            for (int i = 0; i < n / 2; i++)
+                cout << v[i] << " " << v[i + n / 2] << " ";
+            cout << endl;
+        }
     }
-    return 0;
 }
