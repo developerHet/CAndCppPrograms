@@ -2,67 +2,77 @@
 using namespace std;
 typedef long long ll;
 typedef vector<int> vi;
-typedef pair<int,int> pi;
-ll MOD=1000000007;
- 
+typedef pair<int, int> pi;
+ll MOD = 1000000007;
 
- 
-void solve() {
- int n,m;
- cin >> n >> m;
- vector<vi> v(n,vector<int>(m,0));
+void solve()
+{
+    int n;
+    cin >> n;
+    vector<int> a(n);
 
- for(int i=0;i<n;i++) {
-    for (int j=0;j<m;j++) {
-        cin >> v[i][j];
-    }
- }
-
- auto sum = [&](int r,int c){
-    int curr = v[r][c];
-    int i = r-1,j=c-1;
-
-    while(i>=0 && j>=0) {
-        curr+=v[i--][j--];
+    for (int i = 0; i < n; i++)
+    {
+        cin >> a[i];
     }
 
-    i=r+1;j=c+1;
-    while(i<n && j<m) {
-        curr+=v[i++][j++];
-    }
+    // bool flag = true;
+    // for (int i = 0; i < n - 1; i++)
+    // {
+    //     if (a[i] != a[i + 1])
+    //     {
+    //         flag = false;
+    //         break;
+    //     }
+    // }
 
-    i=r-1;j=c+1;
-    while(i>=0 && j<m) {
-        curr+=v[i--][j++];
-    }
+    // if (flag)
+    // {
+    //     cout << "YES" << endl;
+    // }
+    // else
+    // {
+        vector<int> b(n + 1);
+        b[0] = a[0];
 
-    i=r+1;j=c-1;
-    while(i<n && j>=0) {
-        curr+=v[i++][j--];
-    }
-    return curr;
- };
+        for (int i = 0; i < n - 1; i++)
+        {
+            if(a[i]%a[i+1]==0 || a[i+1]%a[i]==0) {
+                b[i+1] = max(a[i+1],a[i]);
+                continue;
+            }
+            b[i + 1] = (a[i] * a[i + 1]);
+            //cout << b[i+1] << " ";
+        }
 
- int ans = INT_MIN;
+        b[n] = a[n - 1];
 
- for(int i=0;i<n;i++) {
-    for(int j=0;j<m;j++) {
-        int curr = sum(i,j);
-        ans=max(ans,curr);
-    }
- }
- cout << ans << endl;
+        // for(int i=0;i<=n;i++) {
+        //     cout << b[i] << " ";
+        // }
+
+        vector<int> ans;
+        for (int i = 0; i < n; i++)
+        {
+            ans.push_back(__gcd(b[i], b[i + 1]));
+        }
+
+        if (ans == a)
+            cout << "YES" << endl;
+        else
+            cout << "NO" << endl;
+    //}
 }
- 
- 
- 
-int main() {
+
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     int t;
     cin >> t;
-    while(t--) {
-       solve();
+    while (t--)
+    {
+        solve();
     }
     return 0;
 }

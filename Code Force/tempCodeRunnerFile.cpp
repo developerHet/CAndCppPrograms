@@ -1,58 +1,23 @@
-#include <bits/stdc++.h>
-using namespace std;
-typedef long long ll;
-typedef vector<int> vi;
-typedef pair<int,int> pi;
-ll MOD=1000000007;
- 
- 
- 
-void solve() {
-    int n;
-    cin >> n;
-    vi a(n);
-    for(int i=0;i<n;i++) {
-        cin >> a[i];
-    }
-
-    vector<int> p(n);
-    for(int i=0;i<n;i++) {
-        p[i]=i+1;
-    }
-
-    int l=0,r=0;
-
-    bool ans = true;
-    while(r<n) {
-        while(r<n-1 && a[r]==a[r+1]) r++;
-        if(l==r) {
-            cout << -1 << endl;
-            ans= false;
-            break;
+if(countA>countB) {
+            int j = countA-countB;
+            //cout << j << endl;
+            for(int i=0;i<n && j>0;i++) {
+                if(b[i]!=a[i] && b[i]==0) {
+                    b[i]=1;
+                    //cout << i << endl;
+                    j--;
+                }
+            }
+            if(a==b) cout << countA-countB << endl;
+            else cout << countA-countB+1 << endl;
         } else {
-            rotate(p.begin()+l,p.begin()+r,p.begin()+r+1);
+            int j = countB-countA;
+            for(int i=0;i<n && j>0;i++) {
+                if(b[i]!=a[i] && a[i]==0) {
+                    a[i]=1;
+                    j--;
+                }
+            }
+            if(a==b) cout << countB-countA;
+            else cout << countB-countA+1 << endl;
         }
-        l=r+1;
-        r++;
-        if(!ans) break;
-    }
-
-    if(ans) {
-        for(auto x:p) {
-            cout << x << " ";
-        } cout << endl;
-    }
-}
- 
- 
- 
-int main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    int t;
-    cin >> t;
-    while(t--) {
-       solve();
-    }
-    return 0;
-}
