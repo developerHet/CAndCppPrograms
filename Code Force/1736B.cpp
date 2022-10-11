@@ -29,10 +29,7 @@ void solve() {
 
     
 
-    // for(int i=0;i<=n;i++) {
-    //     cout << b[i] << " ";
-    // }
-
+   
     
     for(int i=0;i<n;i++) {
         int g = __gcd(b[i],b[i+1]);
