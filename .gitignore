@@ -6,3 +6,6 @@
 /test2.exe
 /test.py
 /test2.bin
+TestFile/
+*.bin
+*.exe
