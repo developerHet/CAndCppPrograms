@@ -9,3 +9,5 @@
 TestFile/
 *.bin
 *.exe
+.cph/
+*/.cph/
