@@ -23,11 +23,24 @@ int MOD=1000000007;
  
  
 void solve() {
-    
-    int a,b,c,d;
-    cin >> a >> b >> c >> d;
-    set<int> s{a,b,c,d};
-    cout << 4-s.size() << endl;
+    int n;
+    cin >> n;
+    vi a(n);
+    for(int i=0;i<n;i++) {
+        cin >> a[i];
+    }
+    vi o=a;
+    sortall(a);
+    if(n==1 || a[0]!=a[1]) {
+        for(int i=0;i<n;i++) {
+            if(a[0]==o[i]) {
+                cout << i+1 << endl;
+                return;
+            }
+        }
+    } else {
+        cout << "Still Rozdil" << endl;
+    }
 }
  
  

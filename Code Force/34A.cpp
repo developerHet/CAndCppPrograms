@@ -23,11 +23,17 @@ int MOD=1000000007;
  
  
 void solve() {
-    
-    int a,b,c,d;
-    cin >> a >> b >> c >> d;
-    set<int> s{a,b,c,d};
-    cout << 4-s.size() << endl;
+    int n;
+    cin >> n;
+    vi a(n);
+    for(int i=0;i<n;i++) {
+        cin >> a[i];
+    }
+    int d[3];d[0]=INT_MAX;
+    for(int i=0;i<n;i++) {
+        if(d[0]>abs(a[i]-a[(i+1)%n]))d[1]=i,d[2]=(i+1)%n,d[0]=abs(a[i]-a[(i+1)%n]);
+    }
+    cout << d[1]+1 << " " << d[2]+1 << endl;
 }
  
  

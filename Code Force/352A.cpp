@@ -23,11 +23,19 @@ int MOD=1000000007;
  
  
 void solve() {
-    
-    int a,b,c,d;
-    cin >> a >> b >> c >> d;
-    set<int> s{a,b,c,d};
-    cout << 4-s.size() << endl;
+    int n;
+    cin >> n;
+    int f=0;
+    for(int i=0;i<n;i++) {
+        int x;cin>>x;
+        if(x==5)f++;
+    }
+    if(f==n) {cout << -1 << endl;return;}
+    if(f<9) {cout << 0 << endl;return;}
+    for(int i=0;i<f-(f%9);i++)cout<<5;
+    for(int i=0;i<n-f;i++) {
+        cout << 0;
+    } cout << endl;
 }
  
  

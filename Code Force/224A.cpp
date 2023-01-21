@@ -23,11 +23,12 @@ int MOD=1000000007;
  
  
 void solve() {
-    
-    int a,b,c,d;
-    cin >> a >> b >> c >> d;
-    set<int> s{a,b,c,d};
-    cout << 4-s.size() << endl;
+    int ab,ac,bc;
+    cin >> ab >> ac >> bc;
+    int c = sqrt(ac*bc/ab);
+    int a=ac/c;
+    int b=bc/c;
+    cout << c*4+a*4+b*4 << endl;
 }
  
  

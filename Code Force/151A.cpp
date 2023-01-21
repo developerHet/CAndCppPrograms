@@ -28,7 +28,7 @@ void solve() {
     cout << min(p/np,min(c*d,(k*l)/nl))/n << endl;;
 }
  
- 
+            
  
 signed main() {
     ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
