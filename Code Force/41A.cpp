@@ -23,8 +23,13 @@ int MOD=1000000007;
  
  
 void solve() {
-    int n;cin >> n;
-    cout << "0 0 " << n << endl;
+    string s;
+    cin >>s;
+    string rs;
+    cin >> rs;
+    reverse(all(rs));
+    if(s==rs)cout<<"YES"<<endl;
+    else cout << "NO" << endl;
 }
  
  

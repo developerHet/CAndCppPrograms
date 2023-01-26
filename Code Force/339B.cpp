@@ -23,8 +23,17 @@ int MOD=1000000007;
  
  
 void solve() {
-    int n;cin >> n;
-    cout << "0 0 " << n << endl;
+    int n,m;
+    cin >> n >> m;
+    int x=1;
+    int ans = 0;
+    for(int i=0;i<m;i++) {
+        int a;
+        cin >> a;
+        ans+=(a-x+n)%n;
+        x=a;
+    }
+    cout << ans << endl;
 }
  
  
@@ -34,7 +43,7 @@ signed main() {
     srand(chrono::high_resolution_clock::now().time_since_epoch().count());
     cin.tie(NULL);
     int t=1;
-    //cin >> t;
+  //  cin >> t;
     while(t--) {
        solve();
     }

@@ -23,8 +23,27 @@ int MOD=1000000007;
  
  
 void solve() {
-    int n;cin >> n;
-    cout << "0 0 " << n << endl;
+    // int n;
+    // cin >> n;
+    // string s,x;
+    // cin>>s;
+    // int cnt=1;
+    // for(int i=1;i<n;i++) {
+    //     string y;
+    //     cin>>y;
+    //     if(s==y)cnt++;
+    //     else x=y;
+    // }
+    // if(cnt>n-cnt)cout << s << endl;
+    // else cout << x << endl;
+    int n;
+    cin >> n;
+    string s[n];
+    for(int i=0;i<n;i++) {
+        cin >> s[i];
+    }
+    sort(s,s+n);
+    cout << s[n/2] << endl;
 }
  
  
