@@ -1,1 +1,0 @@
-{"name":"Local: 401A","url":"d:\\Programing Language\\C & C++ Programing\\Code Force\\401A.cpp","tests":[{"id":1660030243003,"input":"3 2\n-1 1 2","output":"1\n"},{"id":1660030276641,"input":"2 3\n-2 -2","output":"2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Programing Language\\C & C++ Programing\\Code Force\\401A.cpp","group":"local","local":true}

@@ -1,1 +1,0 @@
-{"name":"Local: 1741A","url":"d:\\Programing Language\\C & C++ Programing\\Code Force\\1741A.cpp","tests":[{"id":1665499431986,"input":"6\nXXXS XS\nXXXL XL\nXL M\nXXL XXL\nXXXXXS M\nL M","output":"<\n>\n>\n=\n<\n>"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Programing Language\\C & C++ Programing\\Code Force\\1741A.cpp","group":"local","local":true}

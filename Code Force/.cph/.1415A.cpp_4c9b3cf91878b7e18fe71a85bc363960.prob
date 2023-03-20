@@ -1,1 +1,0 @@
-{"name":"Local: 1415A","url":"d:\\Programing Language\\C & C++ Programing\\Code Force\\1415A.cpp","tests":[{"id":1660028277673,"input":"3\n10 10 1 1\n3 5 2 4\n10 2 5 1","output":"18\n4\n6"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Programing Language\\C & C++ Programing\\Code Force\\1415A.cpp","group":"local","local":true}

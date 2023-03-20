@@ -1,1 +1,0 @@
-{"name":"Local: 1709C","url":"d:\\Programing Language\\C & C++ Programing\\Code Force\\1709C.cpp","tests":[{"id":1658418970730,"input":"5\n(?))\n??????\n()\n??\n?(?)()?)","output":"YES\nNO\nYES\nYES\nNO"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Programing Language\\C & C++ Programing\\Code Force\\1709C.cpp","group":"local","local":true}
