@@ -1,1 +1,0 @@
-{"name":"Local: HIGHFREQ","url":"d:\\Programing Language\\C & C++ Programing\\Cod Cheff\\HIGHFREQ.cpp","tests":[{"id":1658935496189,"input":"3\n4\n1 2 1 2\n5\n1 1 1 1 1\n6\n1 2 2 1 2 2","output":"2\n3\n2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Programing Language\\C & C++ Programing\\Cod Cheff\\HIGHFREQ.cpp","group":"local","local":true}
