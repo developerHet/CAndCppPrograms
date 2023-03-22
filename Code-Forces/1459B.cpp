@@ -19,29 +19,16 @@ typedef vector<pii> vpii;
 typedef vector<vi> vvi;
 
 int MOD=1000000007;
-
-
+ 
+ 
+ 
 void solve() {
-    int n,k;
-    cin >> n >> k;
-    vi a(n),b(n);
-	for(int i=0;i<n;i++) cin>>a[i];
-	for(int i=0;i<n;i++) cin>>b[i];
-	long long l=0,r=2e9;
-	while(l<r)
-	{
-		long long mid=l+r+1>>1;
-		long long m=k;
-		
-		for(int i=0;i<n;i++)
-		{
-			m-=max(a[i]*mid-b[i],0LL);
-			if(m<0) break;
-		}
-		if(m>=0) l=mid;
-		else r=mid-1;
-	}
-	cout<<l << endl;
+    int n;cin>>n;
+    if(n==1) cout << 4 << endl;
+    else {
+        if(n%2==0) cout << (n/2+1)*(n/2+1) << endl;
+        else cout << 2*(n/2+1)*(n/2+2) << endl;
+    }
 }
  
  
@@ -51,7 +38,7 @@ signed main() {
     srand(chrono::high_resolution_clock::now().time_since_epoch().count());
     cin.tie(NULL);
     int t=1;
- //   cin >> t;
+    //cin >> t;
     while(t--) {
        solve();
     }
